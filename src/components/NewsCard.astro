@@ -1,0 +1,14 @@
+---
+import Tags from "./Tags.vue";
+const { time, body, list } = Astro.props;
+---
+
+<section class="news-card">
+  <h4>
+    {time}
+  </h4>
+  <p>
+    {body}
+  </p>
+  <Tags list={list} />
+</section>

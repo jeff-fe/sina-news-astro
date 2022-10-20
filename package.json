@@ -1,0 +1,19 @@
+{
+  "name": "sina-news-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^1.2.1",
+    "astro": "^1.5.2",
+    "element-plus": "^2.2.18",
+    "vue": "^3.2.30"
+  }
+}

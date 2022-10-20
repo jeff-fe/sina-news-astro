@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import NewsCard from "../components/NewsCard.astro";
+import { sinaUrl, headerMaps } from "../constant";
+import { get } from "../http";
+const filterList = headerMaps.filter((i) => i.tag === Astro.params.newsType);
+const newsType = filterList.length ? filterList[0].tag : "0";
+
+const res = await get(sinaUrl, {
+  page: 1,
+  page_size: 100,
+  zhibo_id: 152,
+  tag_id: newsType,
+  dire: "f",
+  dpc: 1,
+  type: 0,
+});
+const data = res.result.data.feed.list || [];
+---
+
+<Layout title="7*24实时财经新闻">
+  <Header type={newsType} />
+  <main>
+    {
+      data.map((item) => (
+        <NewsCard
+          time={item.create_time}
+          body={item.rich_text}
+          list={item.tag}
+        />
+      ))
+    }
+  </main>
+</Layout>

@@ -1,0 +1,15 @@
+---
+import { headerMaps } from "../constant.js";
+const newsType = Astro.props.type || "0";
+---
+
+<header>
+  {
+    headerMaps.map((item) => (
+      <a href={"/" + item.tag} class:list={{ active: newsType === item.tag }}>
+        {item.label}
+      </a>
+    ))
+  }
+  <span>Create By Astro</span>
+</header>
