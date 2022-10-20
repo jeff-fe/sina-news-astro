@@ -9,7 +9,7 @@ const newsType = filterList.length ? filterList[0].tag : "0";
 
 const res = await get(sinaUrl, {
   page: 1,
-  page_size: 100,
+  page_size: 200,
   zhibo_id: 152,
   tag_id: newsType,
   dire: "f",
