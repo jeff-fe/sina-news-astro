@@ -11,10 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^2.3.4",
-    "@astrojs/vue": "^1.2.1",
-    "astro": "^1.6.10",
-    "element-plus": "^2.2.22",
-    "vue": "^3.2.45"
+    "@astrojs/vercel": "^2.4.0",
+    "@astrojs/vue": "^1.2.2",
+    "astro": "^1.9.2",
+    "element-plus": "^2.2.29",
+    "vue": "^3.2.47"
   }
 }
